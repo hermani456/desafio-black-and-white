@@ -3,5 +3,5 @@
 - Ejecutar: `npm install`
 - Luego: `node access run-server --k=123`
 - Despues desde el navegador ingresar a: `localhost:8080/`
-- Ingresar una url para ser convertida a blanco y negro.
+- Ingresar una url de imagen para ser convertida a blanco y negro.
 
