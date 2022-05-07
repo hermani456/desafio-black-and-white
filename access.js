@@ -1,7 +1,7 @@
 const yargs = require('yargs')
 const child = require('child_process')
 
-const key = '123'
+const key = 123
 
 yargs
 	.command(
