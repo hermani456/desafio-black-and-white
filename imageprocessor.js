@@ -1,9 +1,9 @@
 const Jimp = require('jimp')
 const fs = require('fs')
 
-const jimp = (file, res) => {
-	Jimp.read(file, (err, image) => {
-		image
+const imageProcessor = (file, res) => {
+	Jimp.read(file, (jimpError, jimpImage) => {
+		jimpImage
 			.resize(350, Jimp.AUTO)
 			.quality(60)
 			.grayscale()
@@ -11,10 +11,11 @@ const jimp = (file, res) => {
 			.then(() => {
 				fs.readFile('newImg.jpg', (err, image) => {
 					res.writeHead(200, { 'Content-Type': 'image/jpeg' })
-					res.end(image)
+					res.write(image)
+					res.end()
 				})
 			})
 	})
 }
 
-module.exports = jimp
+module.exports = imageProcessor
