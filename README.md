@@ -1,4 +1,4 @@
-# desafio-black-and-white
+#Desafio black and White
 - Para levantar el proyecto en tu computador, debes ir a la raíz del proyecto a través de la terminal y 
 - Ejecutar: `npm install`
 - Luego: `node access run-server --k=123`
